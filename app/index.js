@@ -1,11 +1,26 @@
 var USER_DATA = {
   name: 'Kevin',
-  username: 'wedgedeadly',
+  username: 'kevinhamiltonsmith',
   image: 'https://avatars0.githubusercontent.com/u/3848154?v=3&s=460'
-}
+};
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+
+var Link = React.createClass({
+  changeUrl: function() {
+    window.location.replace(this.props.href);
+  },
+  render: function() {
+    return (
+      <span 
+        style={{color: 'blue', cursor: 'pointer'}}
+        onClick={this.changeUrl}>
+        {this.props.children}
+      </span>
+    )
+  }
+});
 
 var ProfilePic = React.createClass({
   render: function() {
@@ -19,7 +34,9 @@ var ProfileLink = React.createClass({
   render: function () {
     return (
       <div>
-        <a href={'https://github.com/' + this.props.username}>{this.props.username}</a>
+        <Link href={'https://github.com/' + this.props.username}>
+          {this.props.username}
+        </Link>
       </div>
     )
   }
