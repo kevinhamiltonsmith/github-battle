@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "production": "webpack -p",
-    "start": "webpack-dev-server --inline --hot"
+    "start": "webpack-dev-server",
+    "start-hot": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,8 @@
   "license": "BSD",
   "dependencies": {
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.6.5",
